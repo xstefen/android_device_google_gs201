@@ -506,6 +506,7 @@ LYNX_PRODUCT := %lynx
 FELIX_PRODUCT := %felix
 TANGOR_PRODUCT := %tangorpro
 CLOUDRIPPER_PRODUCT := %cloudripper
+TANGOR_PRODUCT := %tangorpro
 ifneq (,$(filter $(PANTHER_PRODUCT), $(TARGET_PRODUCT)))
         LOCAL_TARGET_PRODUCT := panther
 else ifneq (,$(filter $(CHEETAH_PRODUCT), $(TARGET_PRODUCT)))
@@ -518,6 +519,8 @@ else ifneq (,$(filter $(TANGOR_PRODUCT), $(TARGET_PRODUCT)))
         LOCAL_TARGET_PRODUCT := tangorpro
 else ifneq (,$(filter $(CLOUDRIPPER_PRODUCT), $(TARGET_PRODUCT)))
         LOCAL_TARGET_PRODUCT := cloudripper
+else ifneq (,$(filter $(TANGOR_PRODUCT), $(TARGET_PRODUCT)))
+        LOCAL_TARGET_PRODUCT := tangorpro
 else
         # WAR: continue defaulting to slider build on gs201 to not
         # break dev targets such as ravenclaw
